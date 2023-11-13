@@ -6,7 +6,7 @@ const livroSchema = new mongoose.Schema(
     titulo: { type: String, require: true },
     editora: { type: String },
     preco: { type: Number },
-    paginas: { typé: Number },
+    paginas: { type: Number },
   },
   { versionKey: false }
 );
