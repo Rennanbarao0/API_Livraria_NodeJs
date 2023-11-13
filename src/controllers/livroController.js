@@ -23,6 +23,18 @@ class LivroController {
       });
     }
   }
+
+  static async listarLivroPorId(req, res) {
+    try {
+      const id = req.params.id;
+      const livroEncontradoPorId = await livro.findById(id);
+      res.status(200).json(livroEncontradoPorId);
+    } catch (error) {
+      res.status(500).json({
+        message: `${erro.message} - Falha ao tentar encontrar livro!`,
+      });
+    }
+  }
 }
 
 export default LivroController;
